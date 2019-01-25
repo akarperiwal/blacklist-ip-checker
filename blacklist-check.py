@@ -69,6 +69,7 @@ def checkblacklist(ip):
 
 if __name__ == "__main__":
     iplists = []
+    print("IP Black List Checked - Akar Periwal")
     parser = argparse.ArgumentParser(description='Black List IP Checked - Akar Periwal')
     parser.add_argument('-i', '--ip', help='IP address to check')
     parser.add_argument('-f', '--file', help='IP address to check')
