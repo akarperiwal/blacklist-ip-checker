@@ -4,7 +4,7 @@ http = urllib3.PoolManager()
 
 
 def checkblacklist(ip):
-    bls = ["b.barracudacentral.org", "bl.spamcannibal.org", "bl.spamcop.net",
+    blserver = ["b.barracudacentral.org", "bl.spamcannibal.org", "bl.spamcop.net",
            "blacklist.woody.ch", "cbl.abuseat.org", "cdl.anti-spam.org.cn",
            "combined.abuse.ch", "combined.rbl.msrbl.net", "db.wpbl.info",
            "dnsbl-1.uceprotect.net", "dnsbl-2.uceprotect.net",
@@ -13,15 +13,15 @@ def checkblacklist(ip):
            "duinv.aupads.org", "dul.dnsbl.sorbs.net", "dul.ru",
            "dyna.spamrats.com", "dynip.rothen.com",
            "http.dnsbl.sorbs.net", "images.rbl.msrbl.net",
-           "ips.backscatterer.org", "ix.dnsbl.manitu.net",
-           "korea.services.net", "misc.dnsbl.sorbs.net",
-           "noptr.spamrats.com", "ohps.dnsbl.net.au", "omrs.dnsbl.net.au",
-           "orvedb.aupads.org", "osps.dnsbl.net.au", "osrs.dnsbl.net.au",
-           "owfs.dnsbl.net.au", "pbl.spamhaus.org", "phishing.rbl.msrbl.net",
-           "probes.dnsbl.net.au", "proxy.bl.gweep.ca", "rbl.interserver.net",
-           "rdts.dnsbl.net.au", "relays.bl.gweep.ca", "relays.nether.net",
-           "residential.block.transip.nl", "ricn.dnsbl.net.au",
-           "rmst.dnsbl.net.au", "smtp.dnsbl.sorbs.net",
+                "ips.backscatterer.org", "ix.dnsbl.manitu.net",
+                "korea.services.net", "misc.dnsbl.sorbs.net",
+                "noptr.spamrats.com", "ohps.dnsbl.net.au", "omrs.dnsbl.net.au",
+                "orvedb.aupads.org", "osps.dnsbl.net.au", "osrs.dnsbl.net.au",
+                "owfs.dnsbl.net.au", "pbl.spamhaus.org", "phishing.rbl.msrbl.net",
+                "probes.dnsbl.net.au", "proxy.bl.gweep.ca", "rbl.interserver.net",
+                "rdts.dnsbl.net.au", "relays.bl.gweep.ca", "relays.nether.net",
+                "residential.block.transip.nl", "ricn.dnsbl.net.au",
+                "rmst.dnsbl.net.au", "smtp.dnsbl.sorbs.net",
            "socks.dnsbl.sorbs.net", "spam.abuse.ch", "spam.dnsbl.sorbs.net",
            "spam.rbl.msrbl.net", "spam.spamrats.com", "spamrbl.imp.ch",
            "t3direct.dnsbl.net.au", "tor.dnsbl.sectoor.de",
@@ -34,7 +34,7 @@ def checkblacklist(ip):
     BAD = []
     total = 0
     failed = 0
-    for bl in bls:
+    for bl in blserver:
 
         try:
             my_resolver = dns.resolver.Resolver()
