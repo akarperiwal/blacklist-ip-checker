@@ -13,7 +13,6 @@ python3 blacklist-check.py -i <Your IP>
 python3 blacklist-check.py -f <File which contain IPs list (One per line)>
 
 
-
 e.g
 
 python3 blacklist-check.py -i 8.8.8.8
